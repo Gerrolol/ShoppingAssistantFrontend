@@ -11,7 +11,7 @@ function Search() {
     .filter(item => item.length > 0)
 
   async function handleClick() {
-    const response = await fetch('http://localhost:8080/search/cheapest/list', {
+    const response = await fetch('https://shoppingassistantbackend2.onrender.com/search/cheapest/list', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ items: itemsArray })

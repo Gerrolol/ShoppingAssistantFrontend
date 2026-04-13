@@ -20,8 +20,8 @@ function AddItem() {
 
     try {
       const [wooliesRes, colesRes] = await Promise.all([
-        fetch(`http://localhost:8080/api/woolies/get/List?item=${input}`),
-        fetch(`http://localhost:8080/api/coles/get/List?item=${input}`)
+        fetch(`https://shoppingassistantbackend2.onrender.com/api/woolies/get/List?item=${input}`),
+        fetch(`https://shoppingassistantbackend2.onrender.com/api/coles/get/List?item=${input}`)
       ])
       setWooliesItems(await wooliesRes.json())
       setColesItems(await colesRes.json())
@@ -39,7 +39,7 @@ function AddItem() {
     }
     try {
       if (selectedWoolies) {
-        await fetch('http://localhost:8080/api/woolies/convert/add', {
+        await fetch('https://shoppingassistantbackend2.onrender.com/api/woolies/convert/add', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -49,7 +49,7 @@ function AddItem() {
         })
       }
       if (selectedColes) {
-        await fetch('http://localhost:8080/api/coles/convert/add', {
+        await fetch('https://shoppingassistantbackend2.onrender.com/api/coles/convert/add', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
