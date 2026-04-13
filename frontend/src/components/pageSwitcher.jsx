@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import MainPage from './mainPage'
-import AddItem from './AddItem'
+import AddItem from './addItem'
 
 function pageSwitcher() {
   const [showAddItem, setShowAddItem] = useState(false)
