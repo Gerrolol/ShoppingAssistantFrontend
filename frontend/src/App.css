@@ -1,3 +1,127 @@
+/* STORE COLUMNS */
+.store-columns {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  max-width: 900px;
+  align-items: flex-start;
+}
+
+.store-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.store-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: black;
+}
+
+.store-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.woolies-dot { background-color: #00843D; }
+.coles-dot   { background-color: #E03A3A; }
+
+/* ITEM CARDS */
+.item-card {
+  background: white;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.item-card:hover {
+  border-color: #9ca3af;
+}
+
+.item-name {
+  margin: 0 0 4px;
+  font-size: 14px;
+  color: black;
+}
+
+.item-price {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* HIGHLIGHTED SELECTION */
+.selected-woolies {
+  border-color: #00843D !important;
+  background-color: #f0fdf4;
+}
+
+.selected-coles {
+  border-color: #E03A3A !important;
+  background-color: #fff5f5;
+}
+
+/* SELECTED SUMMARY BOX */
+.selected-summary {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 24px;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+.summary-title {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: black;
+}
+
+.summary-item {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.summary-store {
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.woolies-text { color: #00843D; }
+.coles-text   { color: #E03A3A; }
+
+/* SAVE BUTTON */
+.save-btn {
+  margin-top: 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* MESSAGES */
+.error-msg   { color: #dc2626; font-size: 14px; }
+.success-msg { color: #16a34a; font-size: 14px; }
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -201,21 +325,3 @@ body {
   color: #166534;
 }
 
-.teddy-container {
-  position: fixed;
-  top: -20px;
-  right: -20px;
-  width: 160px;
-  height: 160px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.teddy-container:hover {
-  transform: scale(1.05) rotate(5deg);
-}
-
-.teddy {
-  width: 100%;
-  height: 100%;
-}
